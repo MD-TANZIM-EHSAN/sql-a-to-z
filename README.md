@@ -1,2 +1,3 @@
-# sql-a-to-z
-Complete SQL learning repository covering basics to advanced topics with examples and practice queries.
+# SQL A to Z 📊
+
+This repository contains a complete SQL learning path — from beginner to advanced — with practical examples, syntax explanations, and real-world practice queries. Ideal for students, job seekers, and data professionals.
