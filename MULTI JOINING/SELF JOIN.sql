@@ -1,3 +1,5 @@
+-- -----------------------------------DELTA DETECTION------------------------------------------------------------------
+-- Identifying the difference or changes(delta) between two batches 
 SELECT 
     current.sale_date,
     current.revenue AS current_revenue,
