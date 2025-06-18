@@ -30,4 +30,9 @@ FROM
 -- Replaces specific character with a new character
 select
 '123-456-789' AS OLD_NUM,
-REPLACE('123-456-789','-','') AS NEW_NUM
+REPLACE('123-456-789','-','') AS NEW_NUM;
+
+-- Replace file extence from txt to csv 
+SELECT 
+'report.txt' AS old_file,
+REPLACE('report.txt','.txt','.csv');
