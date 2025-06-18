@@ -1,0 +1,7 @@
+-- ----------------------------------------SQL Function--------------------------------------------------------------
+-- 1 ==> SINGLE ROW FUNCTION ==> 1:  STRING FUNCTION
+                          -- ==> 2:  NUMERIC FUNCTION 
+                          -- ==> 3:  DATE & TIME
+                          -- ==> 4:  NULL
+-- 2 ==> MULTI ROW FUNCTION ==>  1:  AGGREGATE FUNCTION
+                         -- ==>  2:  WINDOW FUNCTION 
