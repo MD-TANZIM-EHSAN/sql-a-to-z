@@ -30,7 +30,7 @@ convert(VARCHAR,CreationTime,34) AS [Europe STD> STYLE:34] -- day-month-year
 FROM Orders */
 -- -----------------------------------------------------------------------------------------------------------------
 -- ------------------------------------------- CAST------------------------------------------------------------------
--- CONVERTS  VALU TO A SPECIFIED DATA TYPE
+-- CONVERTS  VALUE TO A SPECIFIED DATA TYPE
 -- SQL SERVER
 /*select
 cast('123' AS INT) AS [String to int]
