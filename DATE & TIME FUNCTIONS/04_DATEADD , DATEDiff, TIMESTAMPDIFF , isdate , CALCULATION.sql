@@ -62,6 +62,12 @@ FROM employees;
 /*BirthDate: your column with the birthdate
 CURDATE(): today’s date (without time)
 YEAR: difference in years*/
+-- ?? FIND the avg shipping duration in day for each month 
+SELECT 
+    MONTH(OrderDate) AS OrderMonth,
+    AVG(TIMESTAMPDIFF(day, OrderDate,ShipDate)) AS AvgShippingDuration
+FROM orders
+GROUP BY MONTH(OrderDate);
 -- -------------------------------------------VALIDATION-------------------------------------------------------------
 -- ------------------------------------------------------------------------------------------------------------------
 --  ISDATE() in SQL Server:
