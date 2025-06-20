@@ -1,5 +1,6 @@
 -- Group by
 -- Find the total score for each country 
+-- Rule :- All Column in SELECT must be included in GROUP BY
 select  Country,sum(Score) as Total_score from customers
 group by Country;
 -- Find the total score amd total number of customers for each country
