@@ -98,8 +98,8 @@ Rank() OVER(Order by Sales DESC)
  -- Defines a subset of rows within each window that is relevant for the calculation
 SELECT OrderID,OrderStatus, OrderDate,Sales,
 sum(sales) over(partition by OrderStatus order by OrderDate ROWs BETWEEN  CURRENT ROW AND 2 FOLLOWING),
-sum(sales) over(partition by OrderStatus order by OrderDate ROWs BETWEEN 2 preceding AND CURRENT ROW ),
-sum(sales) over(partition by OrderStatus order by OrderDate ROWS unbounded preceding) -- default if we use order by
+sum(sales) over(partition by OrderStatus order by OrderDate ROWs BETWEEN 2 preceding AND CURRENT ROW ), -- $$ RUNNING TOTAL/ ITS use for data analysis $$
+sum(sales) over(partition by OrderStatus order by OrderDate ROWS unbounded preceding) -- default if we use order by -- $$  Rolling TOTAL $$ 
 from orders;
  -- ------------------------------------------RULE-------------------------------------------------------------------
  -- 1==> Window Funtions can be used only in select and order by clauses
@@ -119,7 +119,8 @@ RANK() over(order by SUM(Sales) DESC) from orders
 group by CustomerID;
 
 -- Window function use with ORDER by
--- EXAMPLE: SELECT 
+-- EXAMPLE:
+SELECT 
     OrderID,
     CustomerID,
     Sales,
