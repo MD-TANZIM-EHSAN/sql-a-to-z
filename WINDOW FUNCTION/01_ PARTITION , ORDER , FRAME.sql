@@ -111,11 +111,21 @@ Sales,ProductID,
 SUM(Sales) over(partition by OrderStatus) from orders
 WHERE ProductID IN (101,102);
 -- Window function use with group by
+-- EXAMPLE: -
 -- RANK CUSTOMERS BASED ON THEIR TOTAL SALES
 select CustomerID,
 SUM(Sales),
 RANK() over(order by SUM(Sales) DESC) from orders
 group by CustomerID;
+
+-- Window function use with ORDER by
+-- EXAMPLE: SELECT 
+    OrderID,
+    CustomerID,
+    Sales,
+
+    RANK() OVER (ORDER BY Sales DESC) AS Sales_Rank
+FROM orders
 
 
 
