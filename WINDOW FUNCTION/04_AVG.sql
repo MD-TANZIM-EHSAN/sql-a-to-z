@@ -25,4 +25,9 @@ WHERE Sales > (SELECT AVG(Sales) FROM orders);
 select OrderID,ProductID,OrderDate,Sales,
 AVg(Sales) over(partition by ProductID),
 AVg(Sales) over(partition by ProductID Order by OrderDate) -- moving average by changing date
- from orders
+ from orders;
+ -- Calculate the moving average of Sales  for each product over time , including only the next order
+select OrderID,ProductID,OrderDate,Sales,
+AVg(Sales) over(partition by ProductID),
+AVg(Sales) over(partition by ProductID Order by OrderDate ROWS Between current row and 1 following) -- Rolling
+from orders;
