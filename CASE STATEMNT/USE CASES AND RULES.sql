@@ -66,4 +66,16 @@ select CustomerID, count(*)
  where Sales > 30
 group by CustomerID
 order by CustomerID
+
+-- EXAMPLE :
+-- ?? SEGMENT all orders into 3 categories high,mideum and low sales 
+select OrderID,Sales,
+case when   BUCKET_3 =1 then 'HIGH' 
+ when   BUCKET_3 =2 then 'MEDIUM'
+ when   BUCKET_3 =3 then 'LOW'
+end  PERFORMANCE
+from
+(select OrderID,Sales,
+ntile(3) over(order by Sales desc) BUCKET_3
+from orders)t
  
