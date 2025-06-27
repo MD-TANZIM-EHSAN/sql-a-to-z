@@ -1,0 +1,25 @@
+-- ===============================
+-- A heap is a table storage structure used by database engines 
+--  where data is stored without any specific order — just in the order rows are inserted.
+-- ===============================
+-- 📦 HEAP TABLE STRUCTURE (INTERNAL)
+-- ===============================
+-- • Data rows are stored in no specific order.
+-- • No clustered index on the table.
+-- • Suitable for fast INSERT operations.
+-- • SELECT queries may be slower unless supported by non-clustered indexes.
+-- • Used by default in some DBMS if no primary key is defined.
+-- ===============================
+
+-- ========================================
+-- 📄 DATA PAGE vs INDEX PAGE
+-- ========================================
+-- Data Page:
+-- • Stores actual table rows (full data).
+-- • Used when reading or writing table data.
+--
+-- Index Page:
+-- • Stores index entries (keys + pointers).
+-- • Forms B-Tree structure for indexes.
+-- • Enables fast searches and lookups.
+-- ========================================
