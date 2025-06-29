@@ -1,0 +1,6 @@
+-- TABLE SCAN ==> Read the entire table,page by page and row by row everything
+          --      Which can lead to slower query performance on large table
+-- Index Scan == > Scan all data  in an index to find matching rows
+-- Index Seek == > A targeted search within an index ,retriving only specific rows.
+-- HEAP > cluster > non cluster > clolumnstore
+-- 38
