@@ -21,7 +21,7 @@ group by month(OrderDate)
     OrderID,
     OrderDate AS CurrentOrderDate,
     LAG(OrderDate) OVER (ORDER BY OrderDate) AS PreviousOrderDate,
-    TIMESTAMPDIFF(day, LAG(OrderDate) OVER (ORDER BY OrderDate), OrderDate) AS NrOfDays
+    TIMESTAMPDIFF(day, LAG(OrderDate) OVER (ORDER BY OrderDate), OrderDate) AS NOfDays -- ALWAYS PREVIOUS DAY - CURRENT DAY/DATE
 FROM Orders;
  -- ----------------------------------------CUSTOMER RETENTION ANALYSIS-------------------------------------------
 -- In order to analyze customer loyalty,
